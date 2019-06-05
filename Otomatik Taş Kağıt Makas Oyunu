@@ -2,7 +2,7 @@
 
 import random
 
-oyun_sayisi = int(input("Kaç Kez Oynansın :"))
+oyun_sayisi = int(input("Kaç Kez Oynansın : "))
 
 i = 0
 
@@ -23,9 +23,9 @@ while i <= oyun_sayisi:
 
 print("""
 
-Taş {}
-Kağıt {}
-Makas {}
+Taş {} - %{}
+Kağıt {} - %{}
+Makas {} - %{}
 
-""".format(tas,kagit,makas))
+""".format(tas,int((tas/oyun_sayisi*100)),kagit,int((kagit/oyun_sayisi*100)),makas,int((makas/oyun_sayisi*100))))
 
