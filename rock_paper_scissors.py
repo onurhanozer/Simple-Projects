@@ -1,5 +1,27 @@
 import random
 
+# Basit ASCII sanatı görselleri
+ASCII_ART = {
+    'r': """    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)""",
+    'p': """     _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)""",
+    's': """    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)""",
+}
+
 def get_user_choice():
     """Prompt the user for a valid move and return it."""
     choices = {'r': 'Taş', 'p': 'Kağıt', 's': 'Makas'}
@@ -28,7 +50,8 @@ def main():
     while True:
         user_key, user_move = get_user_choice()
         comp_key, comp_move = get_computer_choice()
-        print(f"Siz: {user_move} | Bilgisayar: {comp_move}")
+        print(f"Siz: {user_move}\n{ASCII_ART[user_key]}")
+        print(f"Bilgisayar: {comp_move}\n{ASCII_ART[comp_key]}")
         winner = determine_winner(user_key, comp_key)
         scores[winner] += 1
         if winner == 'Berabere':
