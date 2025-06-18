@@ -24,7 +24,7 @@ def determine_winner(user_key, comp_key):
 
 def main():
     print("Taş Kağıt Makas Oyununa Hoş Geldiniz!")
-    scores = {'Kullanıcı': 0, 'Bilgisayar': 0, 'Berabere': 0}
+    scores = {'Deneme': 0, 'Bilgisayar': 0, 'Berabere': 0}
     while True:
         user_key, user_move = get_user_choice()
         comp_key, comp_move = get_computer_choice()
